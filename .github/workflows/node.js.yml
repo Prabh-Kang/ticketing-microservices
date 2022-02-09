@@ -22,7 +22,7 @@ jobs:
     steps:
     - run: echo $PWD
     - run: ls -la
-    - run: cd ~
+    - run: cd ../ && ls -la
     - run: echo $PWD
     - run: ls -la
     - uses: actions/checkout@v2
