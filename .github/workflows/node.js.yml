@@ -11,29 +11,22 @@ on:
 
 jobs:
   build:
+    defaults:
+      run:
+        working-directory: auth
 
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        dir: ['auth', 'tickets']
+    #strategy:
+      #matrix:
+        #dir: ['auth', 'tickets']
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
     - run: echo $PWD
     - run: ls -la
-    - run: cd ../ && ls -la
-    - run: echo $PWD
-    - run: cd ../../ && ls -la
-    - run: echo $PWD
-    - run: cd ../../../ && ls -la
-    - run: echo $PWD
-    - run: cd ../../../../ && ls -la
-    - run: echo $PWD
-    - run: cd ../../../../../ && ls -la
-    - run: ls -la
     - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: Use Node.js 16.x
       uses: actions/setup-node@v2
       with:
         node-version: 16.x
