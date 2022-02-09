@@ -21,6 +21,9 @@ jobs:
 
     steps:
     - run: echo $PWD
+    - run: ls -la
+    - run : cd ..
+    - run: ls -la
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
