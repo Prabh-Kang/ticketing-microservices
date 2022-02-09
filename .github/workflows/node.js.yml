@@ -24,6 +24,18 @@ jobs:
     - run: ls -la
     - run: cd ../ && ls -la
     - run: echo $PWD
+    - run: cd ../ && ls -la
+    - run: echo $PWD
+    - run: cd ../ && ls -la
+    - run: echo $PWD
+    - run: cd ../ && ls -la
+    - run: echo $PWD
+    - run: cd ../ && ls -la
+    - run: echo $PWD
+    - run: cd ../ && ls -la
+    - run: echo $PWD
+    - run: cd ../ && ls -la
+    - run: echo $PWD
     - run: ls -la
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
